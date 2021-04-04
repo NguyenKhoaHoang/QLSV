@@ -1,0 +1,11 @@
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\bin\Debug\QuanLySV.exe.config
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\bin\Debug\QuanLySV.exe
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\bin\Debug\QuanLySV.pdb
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.csprojAssemblyReference.cache
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.Form1.resources
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.Form2.resources
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.Properties.Resources.resources
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.csproj.GenerateResource.cache
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.csproj.CoreCompileInputs.cache
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.exe
+E:\lt .net\Winform\WindowsFormsApp1\QuanLySV\obj\Debug\QuanLySV.pdb
