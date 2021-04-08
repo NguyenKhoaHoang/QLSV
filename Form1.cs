@@ -75,11 +75,17 @@ namespace QuanLySV
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if(grvList.SelectedRows.Count==1)
+            DataGridViewSelectedRowCollection r = grvList.SelectedRows;
+            string[] MSSV = new string[r.Count];
+            int index = 0;
+            foreach(DataGridViewRow i in r)
             {
-                string MSSV = grvList.SelectedRows[0].Cells["MSSV"].Value.ToString();
-                CSDL_OOP.Instance.DeleteSV(MSSV);
+                MSSV[index] = i.Cells["MSSV"].Value.ToString();
+                CSDL_OOP.Instance.DeleteSV(MSSV[index]);
+                index++;
             }
+                //string MSSV = grvList.SelectedRows[0].Cells["MSSV"].Value.ToString();
+                //CSDL_OOP.Instance.DeleteSV(MSSV);
             Show(0, "");
         }
 
