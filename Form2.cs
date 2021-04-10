@@ -48,7 +48,8 @@ namespace QuanLySV
                 cbbLopSH.Items.Add(new CBBItem
                 {
                     Value = i.ID_Lop,
-                    Text = i.NameLop
+                    Text = i.NameLop,
+                    Dt = i.NgayHH
                 });
             }
         }
@@ -59,14 +60,7 @@ namespace QuanLySV
                 SV s = CSDL_OOP.Instance.GetSVByMSSV(MSSV);
                 txtMSSV.Text = s.MSSV;
                 txtName.Text = s.NameSV;
-                foreach (LSH i in CSDL_OOP.Instance.GetAllLopSH())
-                {
-                    cbbLopSH.Items.Add(new CBBItem
-                    {
-                        Value = i.ID_Lop,
-                        Text = i.NameLop
-                    });
-                }
+                SetCBB();
                 dtBirth.Value = new DateTime(s.NS.Year, s.NS.Month, s.NS.Day);
                 if (s.Gender == true) rdMale.Checked = true;
                 else rdFemale.Checked = true;
@@ -85,9 +79,19 @@ namespace QuanLySV
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
+
             if (txtMSSV.Text == "" || txtName.Text == "")
             {
                 MessageBox.Show("Hay nhap day du thong tin SV");
+            }
+            else if (txtMSSV.Text.Length != 9)
+            {
+                MessageBox.Show("MSSV phai co 9 ky tu");
+            }
+            else if (dtBirth.Value > ((CBBItem)cbbLopSH.SelectedItem).Dt)
+            {
+                
+                MessageBox.Show("Hay nhap ngay be hon ngay hh");
             }
             else
             {
@@ -100,7 +104,7 @@ namespace QuanLySV
                 else s.Gender = false;
                 if (MSSV == null)
                 {
-                    foreach(SV i in CSDL_OOP.Instance.GetAllSV())
+                    foreach (SV i in CSDL_OOP.Instance.GetAllSV())
                     {
                         if (s.MSSV == i.MSSV)
                         {
@@ -117,6 +121,11 @@ namespace QuanLySV
         private void Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtMSSV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtMSSV.Text.Length == 9) { e.Handled = true; }
         }
     }
 }

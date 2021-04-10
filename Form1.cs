@@ -25,7 +25,8 @@ namespace QuanLySV
                 cbbLopSH.Items.Add(new CBBItem
                 {
                     Value = i.ID_Lop,
-                    Text = i.NameLop
+                    Text = i.NameLop,
+                    Dt=i.NgayHH
                 }); 
             }
         }

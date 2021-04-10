@@ -158,6 +158,7 @@ namespace QuanLySV
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.Size = new System.Drawing.Size(116, 25);
             this.txtMSSV.TabIndex = 3;
+            this.txtMSSV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMSSV_KeyPress);
             // 
             // label3
             // 

@@ -94,37 +94,44 @@ namespace QuanLySV
             DSLopSH.Columns.AddRange(new DataColumn[]
             {
                 new DataColumn("ID_Lop", typeof(int)),
-                new DataColumn("NameLop", typeof(string))
+                new DataColumn("NameLop", typeof(string)),
+                new DataColumn("NgayHH",typeof(DateTime))
             });
            
             DataRow drlsh1 = DSLopSH.NewRow();
             drlsh1["ID_Lop"] = 1;
             drlsh1["NameLop"] = "19TCLC_DT1";
+            drlsh1["NgayHH"] = new DateTime(2020,4,10);
             DSLopSH.Rows.Add(drlsh1);
 
             DataRow drlsh2 = DSLopSH.NewRow();
             drlsh2["ID_Lop"] = 2;
             drlsh2["NameLop"] = "19TCLC_DT2";
+            drlsh2["NgayHH"] = DateTime.Now;
             DSLopSH.Rows.Add(drlsh2);
 
             DataRow drlsh3 = DSLopSH.NewRow();
             drlsh3["ID_Lop"] = 3;
             drlsh3["NameLop"] = "19TCLC_DT3";
+            drlsh3["NgayHH"] = DateTime.Now;
             DSLopSH.Rows.Add(drlsh3);
 
             DataRow drlsh4 = DSLopSH.NewRow();
             drlsh4["ID_Lop"] = 4;
             drlsh4["NameLop"] = "19TCLC_DT4";
+            drlsh4["NgayHH"] = DateTime.Now;
             DSLopSH.Rows.Add(drlsh4);
 
             DataRow drlsh5 = DSLopSH.NewRow();
             drlsh5["ID_Lop"] = 5;
             drlsh5["NameLop"] = "19TCLC_DT5";
+            drlsh5["NgayHH"] = DateTime.Now;
             DSLopSH.Rows.Add(drlsh5);
 
             DataRow drlsh6 = DSLopSH.NewRow();
             drlsh6["ID_Lop"] = 6;
             drlsh6["NameLop"] = "19TCLC_DT6";
+            drlsh6["NgayHH"] = DateTime.Now;
             DSLopSH.Rows.Add(drlsh6);
 
         }

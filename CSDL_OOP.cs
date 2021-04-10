@@ -57,7 +57,8 @@ namespace QuanLySV
             return new LSH
             {
                 ID_Lop = Convert.ToInt32(i["ID_Lop"].ToString()),
-                NameLop = i["NameLop"].ToString()
+                NameLop = i["NameLop"].ToString(),
+                NgayHH = Convert.ToDateTime(i["NgayHH"])
             };
         }
         public List<SV> GetLitSV(int ID_Lop, string Name)//lay danh sach sv bang ID_lop va Name SV

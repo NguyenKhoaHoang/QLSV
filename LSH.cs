@@ -10,6 +10,6 @@ namespace QuanLySV
     {
         public int ID_Lop { get; set; }
         public string NameLop { get; set; }
-
+        public DateTime NgayHH { get; set; }
     }
 }
