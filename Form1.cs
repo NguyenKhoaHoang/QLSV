@@ -84,15 +84,12 @@ namespace QuanLySV
                 CSDL_OOP.Instance.DeleteSV(MSSV[index]);
                 index++;
             }
-                //string MSSV = grvList.SelectedRows[0].Cells["MSSV"].Value.ToString();
-                //CSDL_OOP.Instance.DeleteSV(MSSV);
             Show(0, "");
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            CSDL_OOP.Instance.SortSV(cbbSort.SelectedItem.ToString());
-            Show(0, "");
+            grvList.DataSource= CSDL_OOP.Instance.SortSV(cbbSort.SelectedItem.ToString(), ((CBBItem)cbbLopSH.SelectedItem).Value);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

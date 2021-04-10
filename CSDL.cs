@@ -9,6 +9,7 @@ namespace QuanLySV
 {
     class CSDL
     {
+        
         public DataTable DSSV { get; set; }
         public DataTable DSLopSH { get; set; }
         private static CSDL _instance;
@@ -162,6 +163,8 @@ namespace QuanLySV
             }
             DSSV.Rows.RemoveAt(index);
         }
+        
+
         public void SortSV(string Sort)
         { 
                 DSSV.DefaultView.Sort = Sort;

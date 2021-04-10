@@ -10,6 +10,7 @@ namespace QuanLySV
     
     class CSDL_OOP
     {
+        public delegate bool Compare(SV s1, SV s2);
         private static CSDL_OOP _instance;
         public static CSDL_OOP Instance
         {
@@ -120,9 +121,45 @@ namespace QuanLySV
         {
             CSDL.Instance.DeleteDataRowSV(MSSV);
         }
-        public void SortSV(string Sort)
+        public  void Sort(ref List<SV> arr, Compare cmp)
         {
-            CSDL.Instance.SortSV(Sort);
+            for(int i = 0; i < arr.Count; i++)
+            {
+                for (int j = i; j < arr.Count; j++) 
+                {
+                    if (cmp(arr[i], arr[j]))
+                    {
+                        SV temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        }
+        public List<SV> SortSV(string sort, int ID_Lop)
+        {
+            List<SV> s = GetLitSV(ID_Lop, "");
+            if (sort == "MSSV") 
+            {
+                Sort(ref s, SV.Compare_MSSV);
+            }
+            else if (sort == "NameSV")
+            {
+                Sort(ref s, SV.Compare_NameSV);
+            }
+            else if (sort == "ID_Lop")
+            {
+                Sort(ref s, SV.Compare_ID_Lop);
+            }
+            else if (sort == "NS")
+            {
+                Sort(ref s, SV.Compare_NS);
+            }
+            else if (sort == "Gender")
+            {
+                Sort(ref s, SV.Compare_Gender);
+            }
+            return s;
         }
     }
 }
